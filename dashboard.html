@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Responsive Navbar with Modal</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="bclogo.png" alt="Benedicto College" class="logo">
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Admin</a></li>
+            <li><a href="#">Student</a></li>
+            <li><a href="#">Violation</a></li>
+            <li><a href="#" id="programMenu">Program</a></li>
+            <li><a href="#">Accounts</a></li>
+            <li><a href="#">User Account</a></li>
+            <li><a href="index.html" class="logout">LOG OUT</a></li>
+        </ul>
+    </nav>
+
+    <div id="programContent" class="content" style="display: none;">
+        <button id="addNew">[ADD NEW]</button>
+        <table id="programTable">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Pcode</th>
+                    <th>Description</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Program data will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal -->
+    <div id="programModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Program</h2>
+            <form>
+                <label for="pcode">Program Code:</label>
+                <input type="text" id="pcode" name="pcode"><br>
+                <label for="description">Description:</label>
+                <input type="text" id="description" name="description"><br>
+                <label for="type">Type:</label>
+                <select id="type" name="type">
+                    <option value="Undergraduate">Undergraduate</option>
+                    <option value="Graduate">Graduate</option>
+                </select><br><br>
+                <button type="button" id="saveProgram">Save</button>
+                <button type="button" id="cancel">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
